@@ -179,13 +179,13 @@ Controls lighting fidelity: dynamic lights, detailed lighting, rimlights, light 
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting=very_low`**: No dynamic lights. Skips all world lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=low`**: No dynamic lights. Skips dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium`**: No dynamic lights. Skips very dim lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
-- **`lighting=medium_high`**: No dynamic lights. Fairly detailed lighting.
-- **`lighting=high`**: 6 dynamic lights. Detailed lighting.
-- **`lighting=very_high`**: 12 dynamic lights. Detailed lighting.
-- **`lighting=ultra`**: 32 dynamic lights. Extremely detailed lighting.
+- **`lighting=very_low`**: No dynamic lights. Skips all non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Blocky world lighting.
+- **`lighting=low`**: No dynamic lights. Skips dim non-static lights. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost. Blocky world lighting.
+- **`lighting=medium`**: No dynamic lights. Detailed non-static lighting. No light brightness smoothing, lightwarps, rimlights or lighting brightness boost.
+- **`lighting=medium_high`**: No dynamic lights. Detailed non-static lighting.
+- **`lighting=high`**: 1 dynamic light. Detailed non-static lighting.
+- **`lighting=very_high`**: 4 dynamic lights. Detailed non-static lighting.
+- **`lighting=ultra`**: 32 dynamic lights. Extremely detailed non-static lighting.
 
 ### Lighting Ex
 
@@ -196,7 +196,7 @@ Controls extended lighting commands which cause a material system reload.
 
 Default setting: based on which preset you are currently using.
 
-- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads. Also can cause black rendering artifacts on Linux Mesa graphics drivers.
+- **`lighting_ex=low`**: Better hints to use the lighting fast path (disables bumpmaps, specular and phong). May reduce performance on modern PCs, due to rendering reloads.
 - **`lighting_ex=high`**: Uses whatever the material's lighting needs (enables bumpmaps, specular and phong).
 
 ### Shadows
@@ -211,8 +211,8 @@ Default setting: based on which preset you are currently using.
 - **`shadows=off`**: No shadows.
 - **`shadows=very_low`**: Blobby shadows.
 - **`shadows=low`**: Up to 3 low quality shadows.
-- **`shadows=medium`**: Up to 7 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
-- **`shadows=high`**: Up to 11 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+- **`shadows=medium`**: Up to 23 high quality shadows, and low robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
+- **`shadows=high`**: Up to 23 high quality shadows, and medium robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 - **`shadows=very_high`**: Up to 23 high quality shadows, and high robot/Halloween boss shadow distance. Uses lowest quality model to render shadows.
 - **`shadows=ultra`**: Up to 160 high quality shadows, and unlimited robot/Halloween boss shadow distance. Uses highest quality model (at root LOD) to render shadows.
 
@@ -255,11 +255,11 @@ Controls water reflections.
 Default setting: based on which preset you are currently using.
 
 - **`water=very_low`**: Makes water black. 32x water render resolution.
-- **`water=low`**: Makes water solid. 256x water render resolution.
-- **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
-- **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
+- **`water=low`**: Makes water solid. 128x water render resolution. Fades out to low quality solid/black water at short ranges.
+- **`water=medium`**: Uses standard water with no reflections. Fades out to low quality solid/black water at reasonable ranges. 256x water render resolution.
+- **`water=medium_high`**: Uses standard water with basic reflections. Fades out to low quality solid/black water at reasonable ranges. 512x water render resolution.
 - **`water=high`**: Uses standard water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
-- **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 2K water render resolution.
+- **`water=very_high`**: Uses high quality water with all reflections. Fades out to low quality solid/black water at reasonable ranges. 1K water render resolution.
 - **`water=ultra`**: Uses high quality water with all reflections. Never fades out to low quality water. 2K water render resolution.
 
 ### Particles
@@ -271,11 +271,11 @@ Controls particle effects.
 
 Default setting: based on which preset you are currently using.
 
-- **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality, disables bullet impact flecks.
-- **`particles=low`**: Disables weather particles, reduces particle density/quality, disables bullet impact flecks.
-- **`particles=medium`**: Disables weather particles, reduces particle density/quality, enables bullet impact flecks.
-- **`particles=high`**: Enables weather particles, uses full particle density/quality, enables bullet impact flecks.
-- **`particles=ultra`**: Enables weather particles, uses full particle density/quality, enables bullet impact flecks and forces full simulation for all particles.
+- **`particles=very_low`**: Collapses spawning particles into existing particles (including bullet tracers and flames) together, disables weather particles, reduces particle density/quality.
+- **`particles=low`**: Disables weather particles, reduces particle density/quality.
+- **`particles=medium`**: Disables weather particles, reduces particle density/quality.
+- **`particles=high`**: Enables weather particles, uses full particle density/quality.
+- **`particles=ultra`**: Enables weather particles, uses full particle density/quality, and forces full simulation for all particles.
 
 ### General Post-Processing
 

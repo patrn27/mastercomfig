@@ -43,7 +43,7 @@ Instead of `70` for `viewmodel_fov`, you can use any value you prefer.
 
 ## Black artifacts all over the screen on Linux
 
-This is a bug with later versions of Mesa. You can fix it by adding `lighting_ex=high` to your `modules.cfg`.
+This is a bug with TF2's legacy ToGL renderer and an interaction with the Mesa drivers. You can fix it by adding `lighting_ex=high` to your `modules.cfg`, or by using the Vulkan version of the game.
 
 You can also configure the drirc file (optionally using the adriconf GUI) to set `disable_uniform_array_resize` to `true` for Team Fortress 2.
 
