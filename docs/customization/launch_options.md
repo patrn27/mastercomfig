@@ -21,7 +21,7 @@ Read below about optional launch options and choosing your own DXLevel.
 === "Windows"
 
     !!! info
-        Add these launch options to your first launch, and then **remove them**. Keeping the -dxlevel launch option causing a multitude of issues, like graphics settings not applying properly, slow loading times, freezes, TF2 not using your hardware properly, and more.
+        Add these launch options to your first launch, and then **remove them**. Keeping the -dxlevel launch option causes many issues, like graphics settings not applying properly, slow loading times, freezes, TF2 not using your hardware properly, and more.
 
      * **-dxlevel 90** : DirectX 9, Pixel Shader 2.0b. Lower graphical quality while still using semi-modern rendering methods.
      * **-dxlevel 100** : DirectX 9+, Pixel Shader 3.0. Highest graphical quality.
